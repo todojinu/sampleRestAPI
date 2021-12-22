@@ -1,0 +1,21 @@
+#프로젝트 설정 추가
+spring:
+  #h2 Database 설정 추가
+  h2:
+    console:
+      enabled: true  # h2 console 사용을 위한 설정
+
+  datasource:
+    # datasource.url.h2.mem 설정을 통해 In Memory DB로 동작이 가능(설정 하지 않아도 in memory 가 default)
+    # -시스템의 메모리(JVM) 위에서 구동됨 -> application 종료되면 Data가 손실된다
+    url: jdbc:h2:mem:database-sampleRestAPI  # "database-sampleRestAPI" 로 database url을 고정
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver
+
+  jpa:
+    defer-datasource-initialization: true  # Hibernate 초기화시 data.sql 가 실행되도록 설정
+    show-sql: true  # console에 sql을 출력
+    properties:
+      hibernate:
+        format_sql: true  # console에 출력되는 sql을 포멧팅 한다

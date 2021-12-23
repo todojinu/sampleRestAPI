@@ -1,4 +1,7 @@
 #프로젝트 설정 추가
+server:
+  port: 8010
+
 spring:
   #h2 Database 설정 추가
   h2:
@@ -19,3 +22,4 @@ spring:
     properties:
       hibernate:
         format_sql: true  # console에 출력되는 sql을 포멧팅 한다
+

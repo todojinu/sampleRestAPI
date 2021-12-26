@@ -1,7 +1,5 @@
 package com.example.sampleRestAPI.entity;
 
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import lombok.*;
 
 import javax.persistence.*;
@@ -21,7 +19,7 @@ public class AccountDetail {
     private String tranDy;  //거래일자
 
     @Id
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.LAZY, optional = false)
     //외래키 매핑. name: 매핑할 외래키, referencedColumnName: 참조하는 테이블의 컬럼명
     @JoinColumn(name = "account_acno", referencedColumnName = "acno")
     private Account account;  //계좌

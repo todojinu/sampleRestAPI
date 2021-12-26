@@ -17,7 +17,7 @@ public class SwaggerConfig {
    @Bean
     public Docket api() {  // Docket 은 Swagger 설정의 핵심이 되는 Bean
         return new Docket(DocumentationType.OAS_30)
-                .useDefaultResponseMessages(false)  //Swagger 에서 제공해주는 기본 응답코드(200, 401, 403, 404). false 로 설정하면 기본응답코드 노출하지 않음
+//                .useDefaultResponseMessages(false)  //Swagger 에서 제공해주는 기본 응답코드(200, 401, 403, 404). false 로 설정하면 기본응답코드 노출하지 않음
                 .select()
                 .apis(RequestHandlerSelectors.basePackage("com.example.sampleRestAPI.controller"))  // API 스펙이 작성되어 있는 패키지(Controller) 지정
                 .paths(PathSelectors.any())  //APIs 중 특정 path를 선택

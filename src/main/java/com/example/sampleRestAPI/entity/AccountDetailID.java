@@ -19,11 +19,10 @@ public class AccountDetailID implements Serializable {
      * -클래스의 접근 제한자는 public 이어야 함
      */
 
-    private String tranDy;  //거래일자
+    private String dpstDy;  //입금일자
 
     private Long account;   //계좌
 
-    private int tranSeq;   //거래순번
-
+    private int dpstSeq;   //입금순번
 
 }

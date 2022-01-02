@@ -31,7 +31,7 @@ public class User {
     @Column(length = 8)
     private String aplyDy;  //등록일자
 
-    @PrePersist  //  persist() 로 엔티티가 영속성컨텍스트에 저장되기 직전에 호출됨
+    @PrePersist  // persist() 로 엔티티가 영속성컨텍스트에 저장되기 직전에 호출됨
     public void onPrePersist() {
         this.aplyDy = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyyMMdd"));
     }

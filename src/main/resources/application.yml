@@ -15,6 +15,7 @@ spring:
     username: sa
     password:
     driver-class-name: org.h2.Driver
+    data: classpath:h2/data.sql  #애플리케이션 실행시 초기 데이터를 생성
 
   jpa:
     defer-datasource-initialization: true  # Hibernate 초기화시 data.sql 가 실행되도록 설정

@@ -3,6 +3,7 @@ package com.example.sampleRestAPI.entity;
 import lombok.*;
 
 import javax.persistence.*;
+import java.math.BigDecimal;
 
 @Entity
 @Getter
@@ -16,7 +17,7 @@ public class AccountDetail {
 
     @Id
     @Column(length = 8)
-    private String tranDy;  //거래일자
+    private String dpstDy;  //입금일자
 
     @Id
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
@@ -25,9 +26,11 @@ public class AccountDetail {
     private Account account;  //계좌
 
     @Id
-    private int tranSeq;  //거래순번
+    private int dpstSeq;  //입금순번
 
     @Column(length = 1, nullable = false)
     private String dpstWthdrwYn;  //입출금여부(Y:입금, N:출금)
+
+    private BigDecimal dpstAmt;  //입금금액
 
 }

@@ -22,7 +22,7 @@ public class UserController {
     @Autowired
     private UserService userService;
 
-    @ApiOperation(value = "사용자 목록 조회", notes = "전체 사용자 목록을 조회한다.")
+    @ApiOperation(value = "사용자 목록", notes = "전체 사용자 목록을 조회한다.")
     @GetMapping("")
     public ResponseEntity<List<UserDTO>> getUserList() {
 
@@ -31,7 +31,7 @@ public class UserController {
         return new ResponseEntity<>(userService.getUserList(), HttpStatus.OK);
     }
 
-    @ApiOperation(value = "사용자 등록", notes = "사용자를 등록한다.")
+    @ApiOperation(value = "사용자 추가", notes = "사용자를 등록한다.")
     @PostMapping("")
     public ResponseEntity<UserDTO> saveUser(@RequestBody UserRegDTO userRegDTO) {
 

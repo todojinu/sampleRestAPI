@@ -8,19 +8,18 @@ import javax.persistence.*;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
-@Entity
-@Builder
 @Getter
-@Setter
+@Builder
 @ToString
 @AllArgsConstructor
 @NoArgsConstructor
+@Entity
 @EntityListeners(AuditingEntityListener.class)
 public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long UserId;  //사용자 ID
+    private Long userId;  //사용자 ID
 
     @Column(nullable = false)
     private String name;  //사용자명
